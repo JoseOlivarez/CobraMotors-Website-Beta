@@ -1,0 +1,52 @@
+﻿@page
+@using Microsoft.AspNetCore.Components.Web
+@using CobraMotors.WebSite.Models
+@using CobraMotors.Services
+@using System.Data.SqlClient
+@inject JsonFileProductService ProductService
+@model CobraMotors.WebSite.IndexModel
+@{ViewData["Title"] = "Sell Product";
+
+}
+
+<div class="newspaper">
+   </div>
+
+<h3>
+    <div class="text-center"><a href="mailto: cobramotors@gmail.com"><h1 class="text-main">Sell your vehicle!</h1></a>
+        Let us know the following information in an email!
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col order-first">
+                    <ul>
+                        <li>First: The vehicle title:</li>
+                        <li>  Standing Price: </li>
+                        <li>
+                            Is the vehicle available for negotiation?
+                        </li>
+                        <li>
+                            Is the vehicle available for auction?
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li>  Secondly, any damges to the vehicle. </li>
+                        <li>  Miles driven by vehicle.</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li>   Thirdly, a photo of the vehicle</li>
+                        <li>This photo must be taken from all four sides to ensure validity.</li>
+                        <li>  A decision will be made and payment arrangements are discussed.</li>
+                        <li> The car will then be taken to the Black Cobra Motors Headquarters.</li>
+                    </ul>
+                    </div>
+                </div>
+                </ul>
+            </div>
+        </div>
+</h3>

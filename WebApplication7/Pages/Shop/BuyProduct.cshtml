@@ -1,0 +1,45 @@
+﻿@page
+@using Microsoft.AspNetCore.Components.Web
+@using CobraMotors.WebSite.Models
+@using CobraMotors.Services
+@using CobraMotors.Components
+@using System.Data.SqlClient
+@using CobraMotors.WebSite.Pages
+
+@inject JsonFileProductService ProductService
+@model CobraMotors.WebSite.IndexModel
+@{ViewData["Title"] = "Index";
+
+}
+<div class="card-columns">
+    @foreach (var product in ProductService.GetProducts())
+    {
+        <div class="card">
+            <div class="card-img" style="background-image: url('@product.Image');">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">@product.Title</h5>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">
+                    <button onclick="(e => SelectProduct(product.Id))"
+                            data-toggle="modal" data-target="#productModal" class="btn btn-primary">
+                        More Info
+                    </button>
+                </small>
+            </div>
+        </div>
+    }     @(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered)){
+    }
+</div>
+<script src="_framework/blazor.server.js"></script>
+@{
+    Product selectedProduct;
+    string selectedProductId;
+
+    void SelectProduct(string productId)
+    {
+        selectedProductId = productId;
+        selectedProduct = ProductService.GetProducts().First(x => x.Id == productId);
+    }
+}

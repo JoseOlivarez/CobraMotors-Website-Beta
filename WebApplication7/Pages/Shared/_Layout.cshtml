@@ -13,17 +13,22 @@
 
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light"style=" background-color: #FFFFFF;">
-                <img src="https://res.cloudinary.com/dcmdigkqy/image/upload/v1594548021/103253787_130013112050109_9086874792112093337_n_gdgplq.jpg" alt="Girl in a jacket" width="200" height="200">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">
+                    <img src="https://res.cloudinary.com/dcmdigkqy/image/upload/v1594548021/103253787_130013112050109_9086874792112093337_n_gdgplq.jpg" alt="Girl in a jacket" width="200" height="200"></a>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="#">   <a class="sublinks"> Cobra Motors </a></a>
-                        <a class="nav-item nav-link" href="#"> <a class="sublinks"> Buy &nbsp; </a></a>
-                        <a class="nav-item nav-link" href="#"><a class="sublinks"> Sell &nbsp; </a></a>
-                        <a class="nav-item nav-link" href="#"> <a class="sublinks">Contact Us &nbsp; </a></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-item nav-link active" href="#">
+                                <a class="sublinks">
+                                </a>
+                            </a>
+                </a>
+                        <a class="nav-item nav-link" href="#"> <a class="sublinks"> <a class="navbar-brand" asp-area="" asp-page="/Shop/BuyProduct">Buy &nbsp</> </> </a></a>
+                        <a class="nav-item nav-link" href="#"><a class="sublinks"> <a class="navbar-brand" asp-area="" asp-page="/Shop/SellProduct">Sell &nbsp; </a></a></a>
+                        <a class="nav-item nav-link" href="#"> <a class="sublinks"><a class="navbar-brand" asp-area="" asp-page="/Contact/ContactUs">Contact Us &nbsp;</a> </a></a>
                     </div>
                 </div>
             </nav>
