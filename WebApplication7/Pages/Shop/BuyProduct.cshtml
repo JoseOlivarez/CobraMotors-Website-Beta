@@ -29,7 +29,12 @@
                 </small>
             </div>
         </div>
-    }     @(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered)){
+    }    
+    
+    
+    
+    
+    @(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered)){
     }
 </div>
 <script src="_framework/blazor.server.js"></script>
