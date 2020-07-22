@@ -10,6 +10,11 @@
 @{ViewData["Title"] = "Index";
 
 }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <div class="card-columns">
     @foreach (var product in ProductService.GetProducts())
     {
@@ -21,11 +26,11 @@
             </div>
             <div class="card-footer">
                 <small class="text-muted">
-                 
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">More Details</button>
+
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#displayModal">More Details</button>
 
                     <!-- Modal -->
-                    <div class="modal" id="myModal" role="dialog">
+                    <div class="modal fade" id="displayModal" role="dialog">
                         <div class="modal-dialog">
                             <div class="container">
                                 <img src="https://res.cloudinary.com/dcmdigkqy/image/upload/v1594548021/103253787_130013112050109_9086874792112093337_n_gdgplq.jpg" width="200" height="200">
@@ -49,15 +54,16 @@
 
                 </small>
             </div>
+            
         </div>
-    }    
-    
-    
-    
-    
+    }
+
+
+
+
     @(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered)){
     }
-</div>
+
 <script src="_framework/blazor.server.js"></script>
 @{
     Product selectedProduct;
